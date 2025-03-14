@@ -6,6 +6,8 @@ import java.util.Arrays;
 import lombok.RequiredArgsConstructor;
 import murraco.model.AppUser;
 import murraco.model.AppUserRole;
+import murraco.model.Servicos;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -46,6 +48,11 @@ public class JwtAuthServiceApp implements CommandLineRunner {
     client.setAppUserRoles(new ArrayList<AppUserRole>(Arrays.asList(AppUserRole.ROLE_CLIENT)));
 
     userService.signup(client);
+    
+    Servicos massagem = new Servicos();
+    massagem.setDescricao("Massagem com duas horas de duração");
+    massagem.setNomeServico("Massagem");
+    massagem.setPrecoServico(20.00);
   }
 
 }
