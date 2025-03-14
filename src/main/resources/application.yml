@@ -1,8 +1,13 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/teste
-    username: root
-    password: 1173
+    user: 
+      url: jdbc:mysql://localhost:3306/teste
+      username: root
+      password: 1173
+    servicos:
+      url : jdbc:mysql://localhost:3306/anotherdb
+      username: root
+      password: 1173
   tomcat:
     max-wait: 20000
     max-active: 50
